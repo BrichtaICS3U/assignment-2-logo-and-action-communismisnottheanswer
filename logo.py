@@ -4,17 +4,18 @@
 
 # adapted from http://www.101computing.net/getting-started-with-pygame/
 
-# Import the pygame library and initialise the game engine
+# Import the pygame library and initialise the game engine and import math for an arc
+import math
 import pygame
 pygame.init()
 
 # Define some colours
 # Colours are defined using RGB values
-BLACK = (0, 0, 0)
+RED = (200, 16, 46)
 WHITE = (255, 255, 255)
-GREEN = (0, 255, 0)
-RED = (255, 0, 0)
-
+BLACK = (0, 0, 0)
+BLUE = (0, 47, 108)
+GREEN = (96, 128, 56)
 # Set the screen size (please don't change this)
 SCREENWIDTH = 400
 SCREENHEIGHT = 400
@@ -44,13 +45,13 @@ while carryOn:
     # --- Draw code goes here
 
     # Clear the screen to white
-    screen.fill(WHITE)
+    screen.fill(GREEN)
 
     # Queue different shapes and lines to be drawn
-    # pygame.draw.rect(screen, RED, [55, 200, 100, 70], 0)
-    # pygame.draw.line(screen, GREEN, [0, 0], [100, 100], 5)
-    # pygame.draw.ellipse(screen, BLACK, [20, 20, 250, 100], 2)
-
+    pygame.draw.ellipse(screen, BLUE, [50, 50, 300, 300], 0)
+    pygame.draw.ellipse(screen, WHITE, [90, 90, 225, 225], 0)
+    pygame.draw.ellipse(screen, RED, (102, 102, 200, 200),0)
+    pygame.draw.ellipse(screen, WHITE, (140, 140, 125, 125),0)
     # Update the screen with queued shapes
     pygame.display.flip()
 
