@@ -52,6 +52,12 @@ while carryOn:
     pygame.draw.ellipse(screen, WHITE, [90, 90, 225, 225], 0)
     pygame.draw.ellipse(screen, RED, (102, 102, 200, 200),0)
     pygame.draw.ellipse(screen, WHITE, (140, 140, 125, 125),0)
+    pygame.draw.polygon(screen, WHITE, [[200, 200], [275, 125],[275, 275]], 0)
+    pygame.draw.rect(screen, WHITE, [275, 135, 18, 135])
+    pygame.draw.rect(screen, WHITE, [275, 160, 30, 85])
+    font = pygame.font.Font(None, 110)
+    text = font.render("UBS", -200, RED)
+    screen.blit(text, (150, 175))
     # Update the screen with queued shapes
     pygame.display.flip()
 
